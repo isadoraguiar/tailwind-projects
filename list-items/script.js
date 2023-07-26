@@ -9,9 +9,8 @@ form.onsubmit = function (event) {
 
   if (value == '') return
 
-  const li = ul.querySelector('li').cloneNode(true)
-  li.querySelector('span').textContent = value
-  ul.appendChild(li)
+  ul.innerHTML += `<li
+  class="mt-2 px-4 py-2 bg-white hover:bg-indigo-100 hover:text-indigo-900 border-b last:border-none border-gray-200 transition-all duration-300 ease-in-out flex justify-between"><span>${value}</span><button class="text-red-700 delete">ⅹ</button></li>`
 
   input.value = ''
 }
